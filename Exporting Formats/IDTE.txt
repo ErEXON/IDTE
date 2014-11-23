@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta name="GENERATOR" content="IDTE - http://www.sourceforge.com" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>IDTE - ID Tag Editior</title>
+<p>Build  Using  ID Tag Editor <a href="http://www.sourceforge.com" title="IDTE Website">www.sourceforge.com\p\</a></p>
+	<style type="text/css"><!--
+		h1 { font-family: Verdana, Tahoma,sans-serif, sans-serif; font-size: 17pt; color: #960000 }
+		body { font-family: Verdana, Tahoma,sans-serif, sans-serif; font-size: 8pt; background:#808080}
+		table, tr, td { font-family: Verdana, Tahoma, sans-serif, sans-serif; font-size: 11pt; color: #000000; }
+		a:link, a:visited, a:active { text-decoration: none; color: #ffffff; }
+		a:hover { text-decoration: none; color: #ffffff; }
+		.title { font-weight: bold; padding: 7px; margin: 0px; color: #000000; }
+		.odd { background-color: #ffffff; }
+	--></style>
+</head>
+<body>
+<h1>IDTE-ID3 Tag Editior</h1>
+<table>
+<tr>
+<th class="title">Title</th>
+<th class="title">Artist</th>
+<th class="title">Album</th>
+<th class="title">Track</th>
+<th class="title">Year</th>
+<th class="title">Genre</th>
+<th class="title">Filename</th>
+</tr>
+<tr>
+<td class="odd">%Title%</td>
+<td class="odd">%Artist% </td>
+<td class="odd">%Album%</td>
+<td class="odd">%Track%</td>
+<td class="odd">%Year%</td>
+<td class="odd">%Genre%</td>
+<td class="odd">%File%</td>
+</tr>
+</table>
+</body>
+</html>

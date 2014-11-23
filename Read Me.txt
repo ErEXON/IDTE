@@ -1,0 +1,42 @@
+How To Install:- 
+
+For Installer version :-
+* Just Double Click on Setup and Follow onscreen Instructions 
+* Now Run IDTE Directly From The Desktop Shortcut
+
+For Portable Version :-
+* Extract the Complete Folder into any directory
+* Now, Run IDTE.exe from the Extracted folder 
+
+How To Remove:-
+
+For Installer Version :-
+* Delete the Desktop Shortcut
+* Now, Goto the Installation Directory of IDTE and run unins.exe to remove the IDTE safely (Without leaving traces).
+* Now, remove the folder completely
+* Voila! Everything Done.
+
+For Portable Version :-
+* Just Remove the Extracted Folder in which You Installed the IDTE.
+
+Note :---
+* If You want to remove its Configuration and saved data (Not Recommended, in case if you want to reinstall IDTE and want to use its previous 
+Settings)then goto "Documents/My Documents" Folder and remove "IDTE_Data" Folder and "IDTE_Configuration.ini" file.
+  
+Thankyou For Trying this Project
+Please Report Your Bugs as, we will always try to fix them
+
+Minimum System requirement
+===========================================================================================================
+Dual Core processor with 1Ghz of min Speed or more (Intel or AMD)
+256 MB of Ram or More
+9MB of HDD Space
+Screen Resolution of 1366 x 768 or More
+==========================================================================================================
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+News:-
+
+Linux Command Line Developer Preview Source Code is available now.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

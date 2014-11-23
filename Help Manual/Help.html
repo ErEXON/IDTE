@@ -1,0 +1,1342 @@
+<!DOCTYPE html>         
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>IDTE Documentation</title>
+		<link rel="shortcut icon" href="images/IDTE.png">
+        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800;'>
+        <link rel='stylesheet' id='rohitink-style-css'  href='stylesheet/css/layout.css' type='text/css' media='all' />
+    </head>
+
+
+<body>
+<header>
+  <div class="rohitink-grid">
+    <a class="logo" href=""><img src="images/IDTE2.png" alt="" /></a>
+      <h1 class="normal">IDTE ID3 Tag Editor Documentation</h1>
+      <!--<h4 class="secondary"><a href="http://RajatKosh.co.in">Rajat Kosh</a></h4>-->
+      
+</div>
+</header>
+
+<div class="rohitink-grid">
+
+<div class="rohitink-tabs">
+<ul class="rohitink-tabs-tabs">
+  <li><a href="#InstallingWordPress"> About IDTE</a></li>
+  <li><a href="#ThemeInstallation">Quick Tutorial</a></li>
+  <li><a href="#ImportingDemoContent"> File Menu</a></li>
+  <li><a href="#TranslatingWordPressTheme"> Edit Menu</a></li>
+  <li><a href="#PageTemplates">View Menu</a></li>
+  <li><a href="#UpdatingWordpressTheme">Organise Menu</a></li>
+  <li><a href="#UploadingYourLogo">Tools Menu</a></li>
+  <li><a href="#ThemeNavigations">Playback Mode Menu</a></li>
+  <li><a href="#StylingColoring">Remove Menu</a></li>
+  <li><a href="#Backgrounds">Search Menu</a></li>
+  <li><a href="#TypographySettings">Export Menu</a></li>
+  <li><a href="#WidgetsCustomSidebars">Settings</a></li>
+  <li><a href="#CustomCSSJS">Album Art</a></li>
+  <li><a href="#ExportImportOptions">Lyrics</a></li>
+  <li><a href="#Blog">Case Conversion</a></li>
+  <li><a href="#Portfolio">Filename Conversion and Renaming</a></li>
+  <li><a href="#News">Quick Tag Editing Mode</a></li>
+  <li><a href="#Employees">Mini Player Mode</a></li>
+  <li><a href="#PricingTables">Command-line Mode</a></li>
+  <li><a href="#Clients">Changing Theme</a></li>
+  <li><a href="#Testimonials">Upgrading IDTE</a></li>
+  <li><a href="#Flexslider">Shell Extension</a></li>
+  <li><a href="#iCarousel">Password Protection</a></li>
+  <li><a href="#RevolutionSlider">Session Management</a></li>
+  <li><a href="#PageComposer">Wine Compatability</a></li>
+  <li><a href="#Shortcodes">License Information</a></li>
+  <li><a href="#ParallaxBackgrounds">Contribute</a></li>
+  <li><a href="#Woocommerce">Further Help</a></li>
+  <!--<li><a href="#ContactForm7">A Little History</a></li>-->
+  <li><a href="#TipsAndTricks">Credits</a></li>
+  <!--<li><a href="#Migration">Migration to V2+</a></li>-->
+</ul>
+<div class="rohitink-tabs-panes">
+
+
+  <div id="InstallingWordPress" class="rohitink-tabs-pane">
+    <h2>About IDTE</h2>
+
+    <p><strong>IDTE</strong> is a full featured <strong>Open-Source</strong> Tag editor cum Audio player which supports<strong> FLAC, APE, MP4, WMA, WAV, ID3, Vorbis and Lyrics Tags</strong>.</br>With the help of IDTE you can Edit Tags of incomplete files, can rename files based on the tag information, export tag information, create playlists , Search for Incomplete Tags on Internet, Fetch Lyrics and/or Cover art ,Tag files from CUE Sheets or playlists, Process Multiple Files at Same Time,Play files in real time,add Sound FX,View visualizations and Lots More...</p>
+    <a class="rohitink-button large" href="http://sourceforge.net/projects/idteid3tagedito/">Official Homepage</a>
+    <p>Followings are some of the key features of IDTE</p>
+    <ul class="custom-list">
+      <li><a title="">Supports FLAC,APE,MP4,WAV,ID3,Vorbis and Lyrics tags reading,editing and tagging in various Audio formats.</a></li>
+      <li><a title="">Supports playback of 40+ various lossy and lossless music formats.</a></li>
+      <li><a title="">Rename files and tags based on tags or filenames.</a></li>
+      <li><a title="">Supports online tag searching, lyrics and cover art fetching.</a></li>
+      <li><a title="">Fully unicode compliant.</a></li>
+      <li><a title="">Quick Tag editing mode and Mini Player mode.</a></li>
+      <li><a title="">More Playlists options for keeping the music collection always arranged.</a></li>
+      <li><a title="">Batch tag editing.</a></li>
+      <li><a title="">Export tags information to whatever format you want.</a></li>
+      <li><a title="">Multiple user-interfaces in order to fit for a particular environment.</a></li>
+      <li><a title="">Password protection for secure access to tags alteration</a></li>
+      <li><a title="">Playlists and CUE sheet support for playback as well as for tag editing</a></li>
+      <li><a title="">Allows Forcefully adding ID3v2 tags to any file.</a></li>
+	  <li><a title="">Real time visualizations, sound FX, extended fields and much more...</a></li>
+    </ul>
+	 <h2>About This Documentation</h2>
+	 
+    <p>The goal of this document is to comprehensively explain the use of <strong>IDTE</strong> and its features to all the users. Since it is not obvious for every user to get all the features and all that stuff at once so, here we are. This Document expects you to have a good understanding of what tags or metadata of audio files is and an idea of what you want to achieve by using this software. If not, you may search them around onto internet and get the basic idea.</p>
+			<div class="rohitink-message-box rohitink-warning-message-box">
+      <a class="box-close-btn" href="#"><i class="rohitink-icon-remove"></i></a>
+        <span>
+		
+            <p><strong>NOTE - </strong><b>IDTE supports only audio files for tagging however, it can play audio contained in video files but, this does not imply that IDTE supports video formats so, please do not tag these video files with IDTE as, it might corrupt the video information or data of your video files. Most of the people do this kind of mistakes and blame IDTE so, if you are not one of them then, KUDOS you are SMART :)</b></p>
+        </span>
+    </div>
+	
+  <!--  <div class="rohitink-message-box rohitink-warning-message-box">
+      <a class="box-close-btn" href="#"><i class="rohitink-icon-remove"></i></a>
+        <span>
+            <p><strong>Disclaimer</strong><br />
+            Please note that we do not give support or any questions related on how to install and maintain wordpress. For any faulty installation that may cause your website or our theme malfunction you should refer to wordpress support forum. Alternatively you can get help from your web hosting.</p>
+        </span>
+    </div>
+-->
+
+  </div><!-- Close Tabs Pane -->
+
+
+
+  <div id="ThemeInstallation" class="rohitink-tabs-pane">
+    <h2>Quick Tutorial</h2>
+
+    <h4>Tutorial Overview</h4>
+	    <p>This tutorial will guide you to do some basic operation in IDTE i.e. saving or removing tags in files. You may also consider it as a quick tutorial for rush editing. However, these are the basic steps that may be require every time you want to modify the tags information.</p>
+	</br>
+	<h4>Let's Begin</h4>
+
+    <hr />
+
+    <h4>Adding or Saving Tags to Files</h4>
+
+    <p>Open the IDTE, you will see the main screen as shown below. Your version of IDTE might look little different from the one shown below but, most of the functionality is however same.</p>
+	<img src="screenshots/IDTE-main.png" alt="">
+    <li><strong>Step 1</strong></li>
+        <ul> Add files to the listview using <strong>file > add file(s)</strong> or by using <strong>Ctrl+O</strong> or by pressing <img src="icons/file.bmp" alt=""/> button in toolbar.</ul>
+		<ul>You may also add folder to the listview using <strong> file > add folder / add folder (Recursively)</strong> or by using <strong>Ctrl+F</strong> or by pressing <img src="icons/foldr.bmp" alt=""/> button in toolbar.
+		</ul>
+		
+	<li><strong>Step 2</strong></li>
+		<p>Now, select or highlight the file you want to edit by using the mouse or the keyboard. The tag information of the selected file will automatically be retrieved into the tag panel fields present on the right side. 
+		If there are multiple files, then by default the value <strong>" < keep > "</strong> will appear in all the fields of tag panel which means that, keep this field as it is with its previous value or contents in all the selected files.</p>
+	
+	<li><strong>Step 3</strong></li>
+	<p>Now, enter the tag information you want to add or edit into the files. You may also remove the information simply by leaving the field empty.
+	</p>
+	<li><strong>Step 4</strong></li>
+	<p>Now, Save the tag information into the files using <strong>file > save all</strong> or by using <strong>Ctrl+S</strong> or by pressing the <img src="icons/save.bmp" alt=""/> button in toolbar.
+	</p>
+		<div class="rohitink-message-box rohitink-warning-message-box">
+      <a class="box-close-btn" href="#"><i class="rohitink-icon-remove"></i></a>
+        <span>
+		
+            <p>Warning! If you are unable to save your tags into the file. The information in the tag panel will be lost if you highlight or select some another file.</p>
+        </span>
+    </div>
+    <div class="clearboth"></div>
+
+    <hr />
+
+  <h4>Removing Tags From Files</h4>
+  <li><strong>Step 1</strong></li>
+        <p> Add files to the listview using <strong>file > add file(s)</strong> or by using <strong>Ctrl+O</strong> or by pressing <img src="icons/file.bmp" alt=""/> button in toolbar.</p>
+		<p>You may also add folder to the listview using <strong> file > add folder / add folder (Recursively)</strong> or by using <strong>Ctrl+F</strong> or by pressing <img src="icons/foldr.bmp" alt=""/> button in toolbar.
+		</p>
+		
+	<li><strong>Step 2</strong></li>
+		<p>Now select or highlight the files by using the mouse or the keyboard. </p>
+	
+	<li><strong>Step 3</strong></li>
+	<p>Now, Remove the tags of the selected files by using <strong>remove > remove all tags</strong> or you may also select any tag type of your choice.
+	</p>
+		<div class="rohitink-message-box rohitink-warning-message-box">
+      <a class="box-close-btn" href="#"><i class="rohitink-icon-remove"></i></a>
+        <span>
+		
+            <p>Remember! Removing Tag will immediately remove the tags information from the files, and removed tags cannot be retrieved again. However, you can still add new values or tags in files</p>
+        </span>
+    </div>
+
+  </div><!-- Close Tabs Pane -->
+
+
+
+<div id="ImportingDemoContent" class="rohitink-tabs-pane">
+    <h2>File Menu</h2>
+		
+<p>Below is a menu by menu explanation on how to use the different options of <b>file menu</b>, please read carefully and if you face any problems that is not covered here, open a thread in our support forum.</p>
+<img src="screenshots/file.png" alt="">
+<hr>
+
+<h4><img src="menu/file.ico" alt=""/> Add File(s)</h4>
+<p>This function will shows a file selection dialog from which, you can select the file or multiple files in order to load into the listview of IDTE. 
+While loading, the available tag information of file will be automatically retrieved into the list.
+</p>
+<h4><img src="menu/Oxy_Ico_18.ico" alt=""/> Add Folder</h4>
+<p>This function will shows a folder selection tree from which, you can select the single folder (subfolders are not included) in order to load into the listview of IDTE. 
+While loading, the available tag information of file will be automatically retrieved into the list.   
+</p>
+<h4><img src="menu/Oxy_Ico_19.ico" alt=""/> Add Folder (Recursively)</h4>
+<p>This function will shows a folder selection tree from which, you can select the folder (subfolders are included) in order to load into the listview of IDTE. 
+While loading, the available tag information of file will be automatically retrieved into the list.   
+</p>
+
+<h4><img src="menu/Oxy_Ico_37.ico" alt=""/> Load Session</h4>
+<p>This function will shows a file selection dialog from which, you can select and load the previous saved session file of IDTE. More information can be found in <u>Session Management</u> section. 
+</p>
+<h4><img src="menu/Oxy_Ico_43.ico" alt=""/> Load Playlist</h4>
+<p>This function will shows a file selection dialog from which, you can select the playlist file for loading it into list. Supported playlists are WPL, M3U and PLS.  
+</p>
+<h4><img src="menu/Oxy_Ico_17.ico" alt=""/> Load CUE File\Sheet</h4>
+<p>This function will shows a file selection dialog from which, you can select the CUE file for loading it into list.   
+</p>
+<h4><img src="menu/Oxy_Ico_20.ico" alt=""/> Read Tags</h4>
+<p>This function will shows a folder selection tree from which, you can select the required folder (including subfolder) in order to read tag from files and after that, it will output the information in the text form using your default text editor.This function will create a file named "Taginfo.txt" which contains all the tag information, that was read by the IDTE in the same selected folder. 
+</p>
+<h4><img src="menu/Oxy_Ico_52.ico" alt=""/> Save Everything</h4>
+<p>This function saves the tag entered in the tag panel to the selected files. If you have selected <strong> < keep > </strong>at one of the fields on the tag panel, the value in the tag will not be changed.    
+</p>
+<h4><img src="menu/Oxy_Ico_41.ico" alt=""/> Save This Session</h4>
+<p>This function will shows a file selection dialog from which, you can select and Save the current session of IDTE as a session file. More information can be found in <u>Session Management</u> section.     
+</p>
+<h4><img src="menu/Oxy_Ico_31.ico" alt=""/> Save To</h4>
+<p>This function will shows a file selection dialog from which, you can save the selected files to some another place.     
+</p>
+<h4><img src="menu/Oxy_Ico_51.ico" alt=""/>Open Current file location</h4>
+<p>This function will open the location of current selected file in the file explorer.    
+</p>
+<h4><img src="menu/Exit.ico" alt=""/> Exit</h4>
+<p>This function will save the current session and exit the IDTE. You may also turn off the session saving feature of IDTE in Configuration in order to faster initialize and exit IDTE.   
+</p>
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+<div id="TranslatingWordPressTheme" class="rohitink-tabs-pane">
+    <h2>Edit Menu</h2>
+<p>Below is a menu by menu explanation on how to use the different options of <b> edit menu</b>, please read carefully and if you face any problems that is not covered here, open a thread in our support forum.</p>
+<img src="screenshots/Edit.png" alt="">
+<hr>
+
+<h4><img src="menu/Oxy_Ico_4.ico" alt=""/> Move Selected</h4>
+<p>This function will move the selected files in list to the user specified directory. Files which are currently playing, cannot be moved using this option therefore you have to stop the playback before moving them.
+</p>
+<h4><img src="menu/Oxy_Ico_56.ico" alt=""/> Copy Selected</h4>
+<p>This function will copy the selected files from the list to the user specified directory.
+</p>
+<h4><img src="menu/copy.ico" alt=""/> Copy Tag</h4>
+<p>This function will Copies text from all edit fields to the clipboard. This clipboard is different from the windows clipboard also, please note that cover art will not be copied into clipboard. 
+</p>
+
+<h4><img src="menu/cut.ico" alt=""/> Cut Tag</h4>
+<p>This function will retrieve text from all edit fields to the clipboard and make them empty. This clipboard is different from the windows clipboard also, please note that cover art will not be included into clipboard. 
+</p>
+
+<h4><img src="menu/paste.ico" alt=""/> Paste Tag</h4>
+<p>This function will Paste text in all the edit fields from the clipboard. This clipboard is different from the windows clipboard also, please note that cover art will not be pasted in this option. 
+</p>
+
+<h4><img src="menu/Oxy_Ico_32.ico" alt=""/> Rename Tag Files</h4>
+<p>This function will shows a input box from where, you can enter the new name and rename the filenames of your files with a number in suffix.</br> 
+</p>
+<h4> Select All</h4>
+<p>This function will select or highlight all the items in listview of IDTE.
+</p>
+<h4> Deselect All</h4>
+<p>This function will deselect all the items in listview of IDTE.
+</p>
+<h4> Invert Selection</h4>
+<p>This function will invert the selection of files in listview e.g. if one file is selected in list then, using this option will select all the files except that previously selected file.     
+</p>
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+ 
+
+<div id="PageTemplates" class="rohitink-tabs-pane">
+    <h2>View Menu</h2>
+<p>Below is a menu by menu explanation on how to use the different options of <b> view menu</b>, please read carefully and if you face any problems that is not covered here, open a thread in our support forum.</p>
+<img src="screenshots/View.png" alt="">
+<hr>
+
+<h4><img src="menu/Oxy_Ico_43.ico" alt=""/> Tag Details</h4>
+<p>This function will shows the message box containing all the tag information of the selected file in list.
+</p>
+
+<h4><img src="menu/preview.ico" alt=""/> Cover Art</h4>
+<p>This function will open up your default image viewer in order to show the cover art of the selected file in list (If Present).
+</p>
+
+<h4><img src="menu/Oxy_Ico_26.ico" alt=""/> IDTE Command Line Mode</h4>
+<p>This function will open the Command Prompt and shows a message box regarding the command line options accepted by IDTE. Please note - IDTE command line mode does not process tags other than ID3v2/v1 or APE.
+</p>
+
+<h4><img src="menu/Oxy_Ico_58.ico" alt=""/> Refresh</h4>
+<p>This function will Refresh all the contents in the list as well in the configuration.
+</p>
+
+<h4><img src="menu/Oxy_Ico_30.ico" alt=""/> Visualization</h4>
+<p>This function will shows a window named IDTE Visualization Box which shows the visualization synchronised with the current playing song. Note - You can change the visualizations simply by clicking on them. 
+</p>
+
+<h4><img src="menu/eq.ico" alt=""/> Equalizer</h4>
+<p>This function will shows the five band graphic Equalizer in order to sample the audio according to your need.</br> 
+</p>
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+<div id="UpdatingWordpressTheme" class="rohitink-tabs-pane">
+     <h2>Organise Menu</h2>
+<p>Below is a menu by menu explanation on how to use the different options of <b> organise menu</b>, please read carefully and if you face any problems that is not covered here, open a thread in our support forum.</p>
+<img src="screenshots/Organise.png" alt="">
+<hr>
+
+<h4><img src="menu/Oxy_Ico_59.ico" alt=""/> Convert Selected Tags into Filename</h4>
+<p>This function will shows the input box for inputting the scheme and, convert the files according to their tag information. More information can be found at <u>Filename Conversion and Renaming</u> section.
+</p>
+
+<h4><img src="menu/file_conv.ico" alt=""/> Tag Files From Filename</h4>
+<p>This function will shows the input box for inputting the scheme according to your filename pattern and, tag the files according to their filename. More information can be found at <u>Filename Conversion and Renaming</u> section.
+</p>
+
+<h4><img src="menu/Oxy_Ico_50.ico" alt=""/> Make Playlist (One Per Artist)</h4>
+<p>This function will shows the folder tree dialog for reading the tag information as well as for saving  the resulting playlist(s) created by IDTE according to the artist information. Note - Every playlist will be named according to its artist name (IDTE will search recursively in subfolder while creating playlist).
+</p>
+
+<h4><img src="menu/Oxy_Ico_23.ico" alt=""/> Make Playlist (One Per Album)</h4>
+<p>This function will shows the folder tree dialog for  reading the tag information as well as for saving the resulting playlist(s) created by IDTE according to the Album information. Note - Every playlist will be named according to its album name (IDTE will search recursively in subfolder while creating playlist).
+</p>
+
+<h4><img src="menu/Oxy_Ico_53.ico" alt=""/> Make Playlist (One Per Directory)</h4>
+<p>This function will shows the folder tree dialog for reading the tag information as well as for saving the resulting playlist(s) according to the Folders. Note - Every playlist will be saved in its folder (IDTE will search recursively in subfolder while creating playlist).
+</p>
+
+<h4><img src="menu/Oxy_Ico_10.ico" alt=""/> Make Playlist (From All Files in Directory)</h4>
+<p>This function will shows the folder tree dialog for reading the tag information as well as for saving the resulting single playlist created by the IDTE from all the supported files in the folder (including subfolders). 
+</p>
+
+<h4><img src="menu/Oxy_Ico_12.ico" alt=""/> Make Playlist (From Selected Files)</h4>
+<p>This function will shows the folder tree dialog for resulting single playlist created from all the selected files in the list. 
+</p>
+
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+<div id="UploadingYourLogo" class="rohitink-tabs-pane">
+      <h2>Tools Menu</h2>
+<p>Below is a menu by menu explanation on how to use the different options of <b> tools menu</b>, please read carefully and if you face any problems that is not covered here, open a thread in our support forum.</p>
+<img src="screenshots/Tools.png" alt="">
+<hr>
+
+<h4><img src="menu/Oxy_Ico_48.ico" alt=""/> Clear All Fields</h4>
+<p>This function will clear up every text edit field in tag panel.
+</p>
+
+<h4><img src="menu/Oxy_Ico_58.ico" alt=""/> Refresh all fields</h4>
+<p>This function will refresh or re-retrieve all the data in the tag panel as well in the list.
+</p>
+
+<h4><img src="menu/quicktag.ico" alt=""/> Quick Tag Editing Mode</h4>
+<p>This function will open up the window named "Quick Tag Editing Mode" in order to tag the files without much hassel of navigating here or there. More Information can be found at <u>Quick Tag Editing Mode</u> section.
+</p>
+
+<h4><img src="menu/MiniMode.ico" alt=""/> Mini Mode</h4> 
+<p>This function will convert the "Giant" IDTE interface into a mini player. Very helpful for quick navigation in case, if you are using IDTE as a music player. More Information can be found at <u>Mini Player Mode</u> section.
+</p>
+
+<h4><img src="menu/Oxy_Ico_27.ico" alt=""/> Configure IDTE</h4>
+<p>This function will open up a window named "Configure IDTE-ID3 Tag Editor" in order to set up the IDTE according to your needs. More Information can be found at <u>Setings</u> section.
+</p>
+
+<h4> Selected Filenames Case Conversion</h4>
+<p>This function will perform the different operations on the filename of the selected files. More information can be found at <u>Case Conversion</u> Section.
+</p>
+
+
+
+</div><!-- Close Tabs Pane -->
+
+
+
+<div id="ThemeNavigations" class="rohitink-tabs-pane">
+      <h2>Playback Mode Menu</h2>
+<p>Below is a menu by menu explanation on how to use the different options of <b> player mode menu</b>, please read carefully and if you face any problems that is not covered here, open a thread in our support forum.</p>
+<img src="screenshots/playback.png" alt="">
+<hr>
+
+<h4> Play List</h4>
+<p>This function will set the playing mode to list i.e. it will play the list sequentially and stops automatically on reaching at the end of list.
+</p>
+
+<h4> Play File</h4>
+<p>This function will set the playing mode to file i.e. it will play the single file and then stops automatically.
+</p>
+
+<h4> Repeat List</h4>
+<p>This function will set the playing mode to list i.e. it will play the list sequentially and on reaching the end of list, it will automatically repeat the list starting from the top of the list.
+</p>
+
+<h4> Repeat File</h4> 
+<p>This function will set the playing mode to repeat i.e. it will play the single file and then repeat it over and over again.
+</p>
+
+<h4> Play Random</h4>
+<p>This function will set the playing mode to random i.e. it will play any random file from the list and then after playing it, it will again select some random file for playback. 
+</p>
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+<div id="StylingColoring" class="rohitink-tabs-pane">
+      <h2>Remove Menu</h2>
+<p>Below is a menu by menu explanation on how to use the different options of <b> remove menu</b>, please read carefully and if you face any problems that is not covered here, open a thread in our support forum.</p>
+<img src="screenshots/Remove.png" alt="">
+<hr>
+
+<h4><img src="menu/Oxy_Ico_28.ico" alt=""/> Remove All Tags</h4>
+<p>This function will remove all the present tags in file.
+</p>
+
+<h4><img src="menu/Oxy_Ico_48.ico" alt=""/> Remove ID3V2 Tag Only</h4>
+<p>This function will remove the ID3V2 tag alone (if Present).
+</p>
+
+<h4><img src="menu/Oxy_Ico_48.ico" alt=""/> Remove ID3V1 Tag Only</h4>
+<p>This function will remove the ID3V1 tag alone (if Present).
+</p>
+
+<h4><img src="menu/Oxy_Ico_48.ico" alt=""/> Remove APE Tag Only</h4>
+<p>This function will remove the APE tag alone (if Present).
+</p>
+
+<h4><img src="menu/Oxy_Ico_48.ico" alt=""/> Remove Lyrics Tag Only</h4>
+<p>This function will remove the ID3V2 tag USLT Frame as well as the Lyrics Tag in the file (If present).
+</p>
+
+<h4><img src="menu/Oxy_Ico_33.ico" alt=""/> Remove Album Art(ID3)</h4>
+<p>This function will remove the ID3V2 album art from the file (if present).
+</p>
+
+</div><!-- Close Tabs Pane -->
+
+
+
+<div id="Backgrounds" class="rohitink-tabs-pane">
+      <h2>Search Menu</h2>
+<p>Below is a menu by menu explanation on how to use the different options of <b> search menu</b>, please read carefully and if you face any problems that is not covered here, open a thread in our support forum.</p>
+<img src="screenshots/Search.png" alt="">
+<hr>
+
+<h4><img src="menu/Search.ico" alt=""/> Search on FreeDB</h4>
+<p>This function will open your default internet browser and search for the highlighted file tags into FreeDB Database and redirects you to that page from the browser.
+</p>
+
+<h4><img src="menu/Search.ico" alt=""/> Search on MusicBrainz</h4>
+<p>This function will open your default internet browser and search for the highlighted file tags into MusicBrainz Database and redirects you to that page from the browser.
+</p>
+
+<h4><img src="menu/Search.ico" alt=""/> Search Cover Art</h4>
+<p>This function will open your default internet browser and search for the highlighted file cover art into AlbumArt.org Database and redirects you to that page from the browser. You might also have to fill the captcha information before getting to the actual page.
+</p>
+
+<h4><img src="menu/Search.ico" alt=""/> Search On Google</h4>
+<p>This function will open your default internet browser and search for the highlighted file onto google and redirects you to that page from the browser.
+</p>
+
+<h4><img src="menu/Search.ico" alt=""/> Search Lyrics</h4>
+<p>This function will open your default internet browser and search for the lyrics of highlighted file onto wikilyrics and redirects you to that page from the browser.
+</p>
+
+
+</div><!-- Close Tabs Pane -->
+
+
+
+<div id="TypographySettings" class="rohitink-tabs-pane">
+      <h2>Export Menu</h2>
+<p>Below is a menu by menu explanation on how to use the different options of <b> export menu</b>, please read carefully and if you face any problems that is not covered here, open a thread in our support forum.</p>
+<img src="screenshots/Export.png" alt="">
+<hr>
+
+<h4><img src="menu/xml.ico" alt=""/> Export to Shareable XML Playlist (Spiff)</h4>
+<p>This function will export your selected or highlighted files into XML format playlist. For More Information regarding spiff format, please checkout the <b> FAQ's </b>.
+</p>
+
+<h4><img src="menu/Oxy_Ico_49.ico" alt=""/> Export Tags to Text Information</h4>
+<p>This function will export all your selected or highlighted files tag information into text information.
+</p>
+
+<h4><img src="menu/Oxy_Ico_44.ico" alt=""/> Export & Create NFO Template</h4>
+<p>This function will create a NFO template from the tag information of the selected files in IDTE. Resulting NFO Template will be a dot and backslash seperated template.
+</p>
+
+<h4><img src="menu/Oxy_Ico_50.ico" alt=""/> Export Tags to User Specified Format</h4>
+<p>This function will export all your selected or highlighted files tag information into the text information but, with the user specified extension instead of txt.
+</p>
+
+<h4><img src="menu/Oxy_Ico_47.ico" alt=""/> Export to Html</h4>
+<p>This function will export all your selected or highlighted files tag information into the html format.
+</p>
+
+<h4><img src="menu/Oxy_Ico_39.ico" alt=""/> Export Cover Art</h4>
+<p>This function will export or extract the cover art from the selected or highlighted files.
+</p>
+
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+<div id="WidgetsCustomSidebars" class="rohitink-tabs-pane">
+      <h2>Settings and Configurations</h2>
+<p>Below is a explanation on how to configure the IDTE to its best so that, you can easily manage IDTE according to yourself.
+</p>	  
+ <img src="screenshots/Config1.png" alt="">
+<hr>
+<h4> General Tab </h4>
+<p>In general tab you will see the configuration as shown above.
+</p>
+    <li><strong> Clear list on Startup</strong></li>
+        <ul> This function will clear the list on startup i.e. it will not let the IDTE to store its previous session. Note - By default IDTE restores its previous session but, however using this option will let the IDTE to take less time for loading and Closing.</ul>
+		
+	<li><strong>Enable Startup Tips</strong></li>
+		<p>This function will let the IDTE to show a small window showing the tips at startup. By default, this option is turned 'on' in IDTE.</p>
+	
+	<li><strong>Automatically check for updates on startup</strong></li>
+	<p>This option will let the IDTE to check for updates on startup. By default this option is turned 'off' in IDTE. 
+	</p>
+	
+	<li><strong>Add Entry in 'send to' menu</strong></li>
+	<p>This function is very helpful in case you want the IDTE to accept files directly through the file explorer using only send to menu. By default this option is turned 'off' in IDTE. 
+	</p>
+	
+	<li><strong>Clear list every time i add new file(s)/folder</strong></li>
+	<p>This function will let the IDTE to clear the list every time you drop,add file or folder into IDTE.
+	</p>
+
+	<li><strong>Allows IDTE to connect to the Internet</strong></li>
+	<p>This function lets the IDTE to connect to the internet so that, it can fetch lyrics,coverart and search online. 
+	</p>	
+
+	<li><strong>Prompt on Exit</strong></li>
+	<p>This function lets the IDTE to show a messagebox while exiting IDTE. Helpful in case, you accidently press the exit button.
+	</p>	
+
+	<li><strong>Default Folder to Start From</strong></li>
+	<p>This function lets the IDTE to, by default start the folder browsing from the entered folder. Note - This function doesn't mean that IDTE will read tags from the specified folder on startup.
+	</p>	
+	</br>
+<h6> Miscellaneous Settings </h6>
+<li><strong>Enable Welcome Note</strong></li>
+	<p>This function will let the IDTE to show a small toaster popup on startup showing "Welcome to IDTE".
+	</p>	
+<li><strong>Enable Splash Screen</strong></li>
+	<p>This function will let the IDTE to show a splash screen on startup.
+	</p>	
+<li><strong>Auto Adjust Coloumns</strong></li>
+	<p>This function will let the IDTE to automatically adjust the coloumns so that, every field is visible inside listview. By default this function is turned 'on' in IDTE.
+	</p>	
+<li><strong>Enable Admin Privilages</strong></li>
+	<p>This function will let the IDTE to run in admin mode instead of current user mode. You may checkout the "why?" button present on the side of this option for more details.
+	</p>	
+	</br>
+<h6> Password Protect </h6>
+ <p> This function will prevent the IDTE from unauthorised acess. Please refer to <u>Password Protection</u> section for more details.
+ </p>
+ </br>
+ <h4> Appearance Tab </h4>
+  <img src="screenshots/Config2.png" alt="">
+ <p> IDTE offers you to even select the fonts,size and colour for your user interface so that, you can set them according to your requirements. Most of the settings in this tab is understood however, following are some of the options.
+ </p></br>
+ <li><strong>Font Name</strong></li>
+<p> This function will let you to select or specify fonts from the drop down list so that you can apply them to IDTE. This function works same for listview, tag panel and toaster popup.
+ </p>
+ <li><strong>Font Size</strong></li>
+<p> This function will let you to select or specify the font size from the drop down list so that you can apply them to IDTE. This function works same for listview, tag panel and toaster popup.
+ </p>
+ <li><strong>Font Colour</strong></li>
+<p> This function will let you to select or specify the font colour from the drop down list so that you can apply them in IDTE. This function works same for listview, tag panel and toaster popup.
+ </p> 
+ <h4> Themes Tab </h4>
+  <img src="screenshots/Config3.png" alt="">
+ <p> Options in this tab will let you to select the user interface for your IDTE. For More Information please refer to <u>Changing Theme</u> Section.
+ </p> 
+ </br>
+ <h4> Other Settings Tab </h4>
+  <img src="screenshots/Config4.png" alt="">
+<li><strong>Enable Batch Track Autonumbering</strong></li>
+<p> This function will let the IDTE to automatically assign ascending no.s to each 'Track' field in case of adding track no. to multiple file(s). By Default this function is turned 'on' in IDTE. Below is a example showing this functionality.</p>
+ <img src="screenshots/Autonumber.png" alt="">
+ <p>Above are some of the files with missing track no.s (# Coloumn). Now, assume that all you want to do is to add seperate track no.s to all these files because, no two songs can have the same track no. in this case.</p>
+  <img src="screenshots/Autonumber1.png" alt="">
+  <p>As you can see, you just have to enter the starting track no. into the track field. And after doing that, you just have to save the tag.</p>
+   <img src="screenshots/Autonumber2.png" alt="">
+   <p>Now, as you can see that, all the track no.s in the songs are different as well as are in a sequence. Voila! this is autonumbering. Now, assume doing this thing without autonumbering. In that case, all you have to do is to add track no. one by one to all the songs.</p>
+</p><b>Note - This function will restrict addition of string in track numbers e.g. Track No. 1/2 will not be auto incremented and added to multiple files. However, tagging single file will still accept strings or numbers.</b></p>
+
+<li><strong>Enable Fullscreen Interface</strong></li>
+<p> Starts the IDTE without close, minimize and restore buttons for fullscreen interface. <b>Note - Works best on screen resolution of 1366 X 760 pixels.</b></p>
+
+<li><strong>Enable Toaster Popups</strong></li>
+<p> Enables / disables the notification toaster popups. By default it is turned 'on' in IDTE.</p>
+
+<li><strong>Enable Grid in Listview </strong></li>
+<p> Enables / disables the grid lines appearing in Listview. this function is very helpful for selection selection purpose. By default this function is turned 'on' in IDTE.</p>
+
+<li><b>Prompt for password on editing/modifying tags</b></li>
+<p> If IDTE is password protected then this function will let the IDTE to prompt for password whenever a tag is modified or edited.</p>
+
+<li><b>Prompt for password on starup</b></li>
+<p> If IDTE is password protected then this function will let the IDTE to prompt for password on startup.</p>
+  
+<li><b>Enable password protection for the conversion</b></li>
+<p> If IDTE is password protected then this function will let the IDTE to prompt for password whenever a file conversion takes place.</p>
+
+<li><b>Enable beat toggler</b></li>
+ <img src="screenshots/Beat.png" alt="">
+<p> This function will enable the beat toggling in player.</p>
+
+<li><b>Enable Visualization</b></li>
+ <img src="screenshots/visual.png" alt="">
+<p> This function will enable the visualization in player.</p>
+
+</br>
+<h6><b>Enable Default Scheme </b></h6>
+<p> This function will enable the default scheme in filename to tag conversion so that, it will not prompt for the scheme anymore. For more information regarding scheme and filename conversion please refer to <u>Filename Conversion and Renaming</u> Section</p> 
+</br>
+ <h4><b> Notification Tab </b></h4>
+  <img src="screenshots/Config5.png" alt="">
+<p> In this tab, most of the functionality is understood however, some of the functionalities are explained below. Please note that this functionality applies to both Toaster Popups and windows native tray notifications. 
+</p>
+
+
+<li><b>Notify on Playing tracks</b></li>
+<p> This function will let the IDTE to display the notification on playing new track in IDTE player.</p>
+
+<li><b>Notify on stopping tracks</b></li>
+<p> This function will let the IDTE to display the notification on stopping any track in IDTE player.</p>
+
+<li><b>Notify on forwarding tracks</b></li>
+<p> This function will let the IDTE to display the notification on forwarding track in IDTE player.</p>
+
+<li><b>Notify on reversing tracks</b></li>
+<p> This function will let the IDTE to display the notification on reversing track in IDTE player.</p>
+
+<li><b>Notify on pausing tracks</b></li>
+<p> This function will let the IDTE to display the notification on pausing track in IDTE player.</p>
+
+<li><b>Notify on Errors</b></li>
+<p> This function will let the IDTE to display the notification if any error occurs.</p>
+
+<li><b>Notify on Sucessful Editing</b></li>
+<p> This function will let the IDTE to display the notification on sucessful editing/modifying tags.</p>
+
+<h6>Preview Tray/Toast</h6>
+<p> This option will show the Tray/Toast preview of the notification.</p>
+
+<h4> Advance Tab </h4>
+  <img src="screenshots/Config6.png" alt="">
+<p> This tab is associated with the advance settings related to Tag saving. 
+</p>
+<h6>Editing ID3 Tags</h6>
+<p> In this section, there is a choice of writing the ID3 tag version to file i.e. ID3v2 or ID3v1 or both. IDTE supports both reading and writing of ID3v2.4/2.3/2.2 and v1/v1.1 depending upon the file tag.</p>
+<li><b>Prefer reading ID3v2 Tag over ID3v1 Tag in MP3 File</b></li>
+<p> This option will let the IDTE to read the preferred tag in MP3 files. It is recommended that this option should be turned 'on' as, ID3v1 tags are getting obsolete therefore, most of the times there are chances are of getting the empty information in tag panel.</p>
+<h6>Forcing ID3 Tags</h6>
+<p> In this section, there is a choice of forcing the tag type to any file or to not force the tags at all. 
+</p>
+<h6>Music Player Options</h6>
+<p> In this section, there is a choice of selecting either the IDTE embeded music player or the windows default player. It is recommended that you must use the IDTE embeded music player for music playback.
+</p>
+<h6>Tags Removal</h6>
+<p> In this section, there is a choice of activating the specific tag removal options.
+</p>
+
+<p><b>Note - All the configuration settings are saved in a file named IDTE_Configuration.ini in my documents / documents folder in your Computer. If you want the IDTE to revert to its default settings then, delete this file in my document / documents folder, IDTE will automatically recover this file with its default settings.</b></p>
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+<div id="CustomCSSJS" class="rohitink-tabs-pane">
+<h2>Album Art</h2>
+<p> This Section will explain you how to do operations on Album art of a music files such as extracting, changing, removing, adding cover art. Some of the formats such as WAV, OGG etc. do not support cover art therefore, these operations are not applicable on those files.</p>
+<img src="screenshots/AlbumArt.png" alt="">
+<hr>
+<li><b>Show Album Art</b></li>
+<p> This function will open your default image viewer in order to show the selected / highlighted file Album Art of file (if present).</p>
+
+<li><b>Set Cover Type</b></li>
+<p> This function will let you to directly set your cover art type to one of the following from its sub menu.</p>
+<img src="screenshots/covertype.png" alt="">
+<p> Please Note - Tags such as WMA and MP4 does not support different types of Album Art therefore, this option will not work for them.</p>
+<li><b>Add Album Art</b></li>
+<p> This function will let you to choose a file for album art (JPEG or PNG) and add this file to the selected or highlighted music files or replace the previous one (if existed of same type).</p>
+<li><b>Extract Album Art</b></li>
+<p> This function will let you to extract the album art (JPEG or PNG) of selected files to the user selected output folder.</p>
+<li><b>Fetch Album Art</b></li>
+<p> This option will open the IDTE mini web browser and fetch the cover art on discogs showing the results on IDTE mini web browser</p>
+<li><b>Copy Album Art</b></li>
+<p> This option will copy the album art of single selected or highlighted file.</p>
+<li><b>Paste Album Art</b></li>
+<p> This option will paste the album art of the previously copied file to the single/multiple selected/highlighted files.</p>
+<li><b>Remove Album Art</b></li>
+<p> This option will remove the album art of the selected or highlighted file. <b>Note - Right now, it works for ID3 Tags Only.</b></p>
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+
+<div id="ExportImportOptions" class="rohitink-tabs-pane">
+<h2>Lyrics</h2>
+<p> This Section will explain you how to fetch or add lyrics to music files. Some of the formats such as WAV, OGG, MP4 etc. do not support lyrics tag therefore, these operations are not applicable on those files.</p>
+<img src="screenshots/Lyrics.png" alt="">
+<hr>
+<h6>Procedure</h6>
+<p> You may add the lyrics to the music files in two ways.</p>
+<li><b>Adding Manually</b></li>
+<p> To manually add the lyrics, select or highlight the music file then, add or write the lyrics in 'lyrics and More' tab. After that click the 'Done', There you go! now, your music files contains the lyrics.</p>
+<li><b>Fetching Lyrics</b></li>
+<p> To fetch the lyrics, select or highlight the music file then, hit the fetch button in 'lyrics and More' tab. If your fetching is sucessful then, lyrics will automatically appear on lyrics TextEdit else, it will prompt you for inputting the artist and title information for refetching.If the lyrics is still empty, then there is a possibility that the requested song is not present in the Online Databases of Lyrics Sources.You may also manually search the lyrics using Search > Search Lyrics.</p>
+<h6>Lyrics Sources (>>)</h6>
+<p> IDTE fetch lyrics using A-Z Lyrics and Lyrics.com. You may also change these sources by clicking '>>' button present near Fetch Button. It will show the options as follows :-</p>
+<img src="screenshots/fetching.png" alt="">
+<p>And select the appropriate source from the above options.</p>
+</div>
+<!-- Close Tabs Pane -->
+
+
+
+
+
+
+
+
+
+<div id="Blog" class="rohitink-tabs-pane">
+<h2>Case Conversion</h2>
+<p> This Section will explain you the filename case conversion facilities of IDTE. Note - This operation applies to both single or multiple selected or highlighted files.</p>
+<img src="screenshots/case.png" alt="">
+<hr>
+
+<li><b>Replace Character X by Character Y</b></li>
+<p>This option will prompt you first, for entering the character/string to replace and then, prompt you for entering the charcter/string to replace with. e.g. if you want to replace the "_" with " " in 'A_Thousand_Suns.mp3' then, after entering the "_" and " " in first and second prompt respectively the, resulting file will be "A Thousand Suns.mp3".</p>
+<li><b>Remove Leading Zero(if Any)</b></li>
+<p> This function will remove the leading 0 from every filename. e.g. filename "01-Linkin Park - A Light that never comes.mp3" will be converted into "1-Linkin Park - A Light that never comes.mp3"</p>
+<li><b>Add Leading Zero</b></li>
+<p> This function will add the leading 0 to every filename (if not already present). e.g. filename "1-Linkin Park - A Light that never comes.mp3" will be converted into "01-Linkin Park - A Light that never comes.mp3"</p>
+<li><b>Uppercase Only First letter of word</b></li>
+<p> This function will uppercase every first letter of every word. e.g. filename "a thousand suns.mp3" will be converted into "A Thousand Suns.mp3"</p>
+
+<li><b>Lowercase Only First letter of word</b></li>
+<p> This function will lowercase every first letter of every word. e.g. filename "A Thousand Suns.mp3" will be converted into "a thousand suns.mp3"</p>
+
+<li><b>Convert All Letters Into Uppercase</b></li>
+<p> This function will uppercase every letter of every word. e.g. filename "A Thousand Suns.mp3" will be converted into "A THOUSAND SUNS.mp3"</p>
+
+<li><b>Convert All Letters Into Lowercase</b></li>
+<p> This function will lowercase every letter of every word. e.g. filename "A THOUSAND SUNS.mp3" will be converted into "a thousand suns.mp3"</p>
+
+<p><b>NOTE - Please reload the files after coverting them because, they might appear as dead in IDTE (depending upon operation).</b></p>
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+
+
+<div id="Portfolio" class="rohitink-tabs-pane">
+<h2>Filename Conversion and Renaming</h2>
+<p> This Section will explain you how to use the facilities of filename conversion to tag and vise-versa in IDTE.Conversion basically means getting tag information from parts of the filename or renaming files based on the information stored in the tag of an audio file. </p>
+<img src="screenshots/convert.png" alt="">
+<hr>
+<h6><u>Tag to filename Conversion</u></h6>
+<p>This option will let you to convert the selected or highlighted files tag information into filename .The procedure is as follows :-</p>
+<li><b>Step 1</b></li>
+<p> Add files into IDTE and select all those files which you would like to convert.</p>
+<li><b>Step 2</b></li>
+<p> go to 'Organise > Convert Selected tags into Filenames' and it will prompt you for entering the scheme.</p>
+<h6>What is a Scheme ?</h6>
+<p>Scheme is a way of arranging the different parts of a tag such as album, artist, track, title etc. in a particular fashion so that, the resulting filename satisfies the scheme and result in expected filename.</p>
+<p><b>Following are the tokens which can be used with scheme:- </b><p>
+<li>%Artist% - This token stores the Artist Information of a file.</li>
+<li>%Album% - This token stores the Album Information of a file.</li>
+<li>%Track% - This token stores the Track Information of a file.</li>
+<li>%Title% - This token stores the Title Information of a file.</li>
+<li>%Year% - This token stores the Year Information of a file.</li>
+<li>%Genre% - This token stores the Genre Information of a file.</li>
+<li>%Comments% - This token stores the Comments Information of a file.</li>
+<li>%Composer% - This token stores the Composer Information of a file.</li>
+<li>%Filename% - This token stores the current filename of a file.</li>
+<li> \ - This token creates the directory.</li>
+
+<p><b>Example :- </b><p>
+<p>A token of <b>%Artist%\%Album% - %Year%\%Track% - %Title%</b> will be equivalent to <b>Onerepublic \ Waking Up - 2010 \ 01 - Passenger.mp3</b> which implies <b>"01 - Passenger.mp3"</b> file is in <b>"Waking up - 2010"</b> sub-folder of <b>"Onerepublic"</b> Folder.</p>
+
+
+<li><b>Step 3</b></li>
+<p> After inputting the string, select the OK button and as per your scheme, IDTE will convert the files. File conversion is very helpful in case of organizing your music files.</p>
+
+<img src="screenshots/filename.png" alt="">
+<p><b> NOTE -> Characters which are illegal in filename except '\' are not accepted in renaming filename.</b></p>
+</br>
+<h6><u>Filename to Tag Conversion</u></h6>
+<p>This option will let you to convert the selected or highlighted files filename into tag information .The procedure is as follows :-</p>
+<li><b>Step 1</b></li>
+<p> Add files into IDTE and select all those files which you would like to convert.</p>
+<li><b>Step 2</b></li>
+<p> go to 'Organise > Tag files from filename' and it will prompt you for entering the scheme.</p>
+<h6>What is a Scheme ?</h6>
+<p>Scheme is a way of arranging the different parts of a tag such as album, artist, track, title etc. in a particular fashion so that, the resulting filename satisfies the scheme and result in expected filename.</p>
+<p><b>Following are the tokens which can be used with scheme:- </b><p>
+<li>%Artist% - This token stores the Artist Information of a file.</li>
+<li>%Album% - This token stores the Album Information of a file.</li>
+<li>%Track% - This token stores the Track Information of a file.</li>
+<li>%Title% - This token stores the Title Information of a file.</li>
+<li>%Year% - This token stores the Year Information of a file.</li>
+<li>%Genre% - This token stores the Genre Information of a file.</li>
+<li>%Comments% - This token stores the Comments Information of a file.</li>
+<li>%Composer% - This token stores the Composer Information of a file.</li>
+<li>%Filename% - This token stores the current filename of a file.</li>
+<li> (-) Hypen - This token seperates the parts of filename.</li>
+
+<p><b>Example :- </b><p>
+<p>A token of <b>%Artist% - %Album% - %Track% - %Title%</b> will be used for </b>Onerepublic - Waking Up - 01 - Passenger.mp3</b> which implies that , Set the Artist to "Onerepublic" , Album to "Waking up", Track to "01" and Title to "Passenger"</p>
+
+
+<li><b>Step 3</b></li>
+<p> After inputting the string, select the OK button and as per your scheme, IDTE will convert the filename into tag.</p>
+
+<p><b>NOTE -> Any Special character except hypens are not accepted in filename to tag conversion therefore, it is recommended to case convert the filename in '-' form before Converting.</b></p>
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+<div id="News" class="rohitink-tabs-pane">
+<h2>Quick Tag Editing Mode</h2>
+<p> This is a special tag editing mode of IDTE which, allows the frequent addition of tags. To open quick tag editing mode goto <b>'tools > Quick Tag Editing mode'</b> or press the <img src="menu/quicktag.ico" alt=""> button.</p>
+<hr>
+<img src="screenshots/quicktag1.png" alt="">
+<p><b> In this mode of tag editing, instead of navigating up and down in listview there are two buttons ">>" and "<<" for navigation which, make it easier to navigate through the list. This mode is very helpful for those users, who want edit tags without navigating here and there i.e. who only wants to tag files using TAB and ENTER</b>.
+Hotkeys.
+</p>
+</br>
+<img src="screenshots/quicktag.png" alt="">
+
+
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+
+<div id="Employees" class="rohitink-tabs-pane">
+<h2>Mini Player Mode</h2>
+<p>To switch to the mini mode go to <b>'tools > mini mode'</b> or press <b>Alt+M</b> or press the <img src="menu/MiniMode.ico" alt=""> button.</p>
+<img src="screenshots/player.png" alt="">
+<hr>
+<h6>About</h6>
+<p>Mini player mode let the IDTE to convert its big screen interface into mini mode. This mode is intended to provide the quick access to all the plaback options. Global Hotkeys are also supported in Mini mode. </p>
+<h6>On Top</h6>
+<p>This option will let the mini mode to stay always on the top of other windows (if checked).</p>
+<h6>Tips</h6>
+<p>You May Scroll Up/down in order to increase/decrease the volume level while playing file in IDTE.</p>
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+
+<div id="PricingTables" class="rohitink-tabs-pane">
+<h2>IDTE Command-Line Mode</h2>
+<img src="screenshots/CMD.png" alt="">
+<hr>
+<p>This option will enable the user to add the ID3 tags to file using IDTE command line mode. You may access the IDTE command line tool outside of IDTE interface in 'Bin'Folder. </p>
+
+<p>As you can see, IDTE will automatically enters into the bin folder for accessing the command line mode.</p>
+<h6>Help </h6>
+<li><b>IDTE_GET_INFO <Version> <filename></b><li> 
+<p>Saves all the Tag Information in Taginfo.txt and Cover.jpg/png in current Folder </p>
+
+<li><b>IDTE_PIC_WRITE <filename> <Picture> [Picture Type]</b></li> 
+<p>Write Cover Art to the Filename.</p>
+
+<li><b>IDTE_REMOVE_ALL <filename></b></li>
+<p>Remove all Tags From the Filename.(ID3v1,v2 and APEv2)</p>
+
+<li><b>IDTE_REMOVE_V1 <filename></b></li>
+<p>Remove ID3v1 Tag from the Filename </p>
+
+<li><b>IDTE_REMOVE_V2 <filename> </b></li>
+<p>Remove ID3v2 Tag</p>
+
+<li><b>IDTE REMOVE APE <filename></b></li>
+<p>Remove APE Tag</p>
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+
+
+
+<div id="Clients" class="rohitink-tabs-pane">
+<h2>Changing Theme </h2>
+<p>IDTE offers three different User Interfaces in order to set your tagging environment in the way you like.</p>
+<hr>
+<h6>How To Change Theme ?</h6>
+<ol>
+<li>Open IDTE</li>
+<li>Go to <b>'Tools > Configure IDTE'</b> and Open the Themes Tab.</li>
+<li>It will appear as shown below.</li>
+<img src="screenshots/Config3.png" alt="">
+<li>Click on the appropriate button and apply the theme.</li>
+<li>Now Click OK.</li>
+<li>In order to review changes, please restart the IDTE.</li>
+</ol>
+<h6>Theme Professional</h6>
+<img src="screenshots/Default Theme.jpg" alt="">
+<h6>Theme Rigid</h6>
+<img src="screenshots/Theme wide arena.jpg" alt="">
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+
+
+
+<div id="Testimonials" class="rohitink-tabs-pane">
+<h2>Upgrading IDTE</h2>
+<p>This section will explain you how to the upgrade the IDTE to its newer version. Since, newer versions includes all the new features and bug fixes therefore, please read carefully and if you face any problems that is not covered here, open a thread in our support forum</p>
+<hr>
+
+<p><b>NOTE - You may turn 'on' the automatic update option in IDTE Settings, which will notify you about IDTE updates on, IDTE startup.</b></p>
+<h6>Steps for Upgrading the IDTE Manually</h6>
+
+<li>Open IDTE.</li>
+<li>Goto <b>'Help > Check for Updates'</b>.</li>
+<li>A splash text will appear on the screen showing, the status for checking the updates.</li>
+<li>If there is a update available online then for example, it will shows the following windows.</li>
+<img src="screenshots/upgrade.png" alt="">
+<li>Else, it will show the messagebox which look like as follows</li>
+<img src="screenshots/message.png" alt="">
+<li>Click on download button and you will be redirected to the download page.</li>
+<li>Now, download and install the newer version of IDTE.</li>
+<p><b>NOTE - It is recommended that, you must uninstall the previous version before installing the newer version of IDTE.</b></p>
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+
+
+
+<div id="Flexslider" class="rohitink-tabs-pane">
+<h2>Shell Extension</h2>
+<p>To increase the functionality of IDTE, you may include the IDTE in Shell. Don't worry, it will not spoil your context menu instead, it will add entry into your "Send to" Submenu</p>
+<hr>
+<img src="screenshots/sendto.png" alt="">
+<h6>Steps: </h6>
+<li>Open IDTE.</li>
+<li>Goto <b>'Tools > Configure IDTE'</b>.</li>
+<li>On General Tab, Check the <b>'Add IDTE entry in "send to" Menu'</b>.</li>
+<li>Click OK. Voila! Everything Done.</li>
+<p><b>NOTE - To remove the entry from "send to" menu,follow the same procedure but, uncheck the checkbox in step 3.</b></p>
+
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+
+
+<div id="iCarousel" class="rohitink-tabs-pane">
+<h2>Password Protection</h2>
+<p>IDTE offers password protection in order to prevent the unauthorised access to the IDTE.</p>
+<hr>
+<h2>How to Password Protect ?</h2>
+<ol>
+<li>Open IDTE in Admin Mode.</li>
+<li>Now, go to <b>'tools > configure IDTE'</b>.</li>
+<img src="screenshots/password.png" alt="">
+<li>Enter the password in the password section of general tab. <b>NOTE - Password must be of atleast 8 characters.</b></li>
+<li>Now, click on Set Password. It will show you a messagebox in order to set seperate prompts.</li>
+<li>Now, Go to Other Settings tab and set the prompts according to your requirements.</li>
+<img src="screenshots/prompt.png" alt="">
+<li>Click OK, Voila! Everthing Done.</li>
+</ol>
+
+
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+
+
+
+
+<div id="RevolutionSlider" class="rohitink-tabs-pane">
+<h2>Session Management</h2>
+<p>IDTE allows loading and saving of session files. By default IDTE restores the Last Session but, you may also load any previously saved session.</p>
+<hr>
+<h6>Saving a Session</h6>
+<ol>
+<li>Open IDTE </li>
+<li>Load some files into it using 'file > add file(s) or folder'</li>
+<li>Now, go to <b>'file > save this session'</b>, it will prompt you for entering the location and filename in order to save the session.</li>
+<li>Everything Done.</li>
+</ol>
+<h6>Loading a Session</h6>
+<ol>
+<li>Open IDTE </li>
+<li>Load the previously saved session using <b>'file > load session'</b>. </li>
+<li>Now, Browse for the previously saved file and click OK.</li>
+<li>Everything Done. IDTE will automatically load all the data using session file.</li>
+</ol>
+<b>NOTE - IDTE saves session in the extension .idte so, be careful with your session file.</b>
+
+</div><!-- Close Tabs Pane -->
+
+
+
+<div id="PageComposer" class="rohitink-tabs-pane">
+<h2>Wine Compatability</h2>
+<p>IDTE is fully compatible with the wine environment.Therefore, linux/mac users may also take advantage of IDTE on their machines.</p>
+<p>IDTE do not require any external dependencies and utilizes its native libraries therefore, it is fully portable.</p>
+<hr>
+<h6>How to :</h6>
+<ol>
+<li>Install and configure WINE in your Linux/Mac machines from <a href="http://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0CDQQFjAB&url=http%3A%2F%2Fwww.winehq.org%2F&ei=X0coU-SfLIHirAeHh4GQAg&usg=AFQjCNG_GieVLJmWMq2dtLWRMyBttJA2Xw&bvm=bv.62922401,d.bmk&cad=rja">Here.</a></li>
+<li>Now, install IDTE into it just by running the <b>setup</b> or <b>use the portable</b> version.</li>
+<li>Now, run IDTE in wine HQ</li>
+<li>There you go!</li>
+<p>This is how IDTE looks in wine (Opensuse 12.3 Distro):-</p>
+<img src="screenshots/Linux.png" alt="">
+<p>Great Work by WINE team. :)</p>
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+
+
+
+
+<div id="Shortcodes" class="rohitink-tabs-pane">
+<h2>License</h2>
+<hr>
+<p><b>IDTE- ID3 Tag Editor by Rajat kosh</br>
+Copyright (c) 2013-14 Team IDTE</br></br>
+</b>
+IDTE is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</br>
+
+IDTE is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</br>
+
+You should have received a copy of the GNU General Public License along with IDTE .If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</br>
+</p>
+
+<p>
+</br>
+<b>
+Bass.dll and Plugins 
+By UN4SEEN
+</b>
+</br>
+License:
+</br>
+BASS is free for non-commercial use. If you are a non-commercial entity (eg. an individual) and you are not charging for your product, and the product has no other commercial purpose, then you can use BASS in it for free.
+</br>
+The full license is available from their website.
+</p>
+
+<p><b>
+IDTE is released under GNU GPL but some of the modules/libraries used in IDTE are not GPL.
+Please check their licenses before Using/Modifying them
+</b>
+</p>
+
+
+
+</div><!-- Close Tabs Pane -->
+
+
+
+<div id="ParallaxBackgrounds" class="rohitink-tabs-pane">
+<h2>Contribute</h2>
+
+<p>Contribution to the project is always welcome, no matter whether you are a developer, or not.</p>
+
+<h4>If You Are a Programmer</h4>
+<p>You can help us by :</p>
+<ol>
+   <li>Introducing new features. </li>
+   <li>Improving features. </li>
+   <li>Tracking Bugs. </li>
+   <li>Porting to a new platform (Yes, we are working so hard on it).</li>
+</ol>
+
+<h4>If You Are a Writer Who</h4>
+<ol>
+   <li>Like or never used IDTE.</li>
+   <li>Run into a problem and end up solving it. </li>
+</ol>
+   <p>Then, you can help us make our documentation better or even more polished, Create tutorials or provide answers on the forum. Help us give the best support to everyone.</li>
+
+   <h4>If You Are a Designer</h4>
+   <p>You can help with your design skills by :.</li>
+<ol>
+   <li>Making, repairing and updating the websites.</li>
+   <li>Create or suggest new skins. </li>
+   <li>Create new icons, screenshots, etc.</li>
+</ol>
+
+   <h4>If You Are a Tester</h4>
+   <p>You can test and report bugs.</p>
+
+   <h4>If You Are a Simple User</h4>
+   <p>You can help IDTE by: </p>
+   <ol>
+   <li>Suggesting Features.</li>
+   <li>Reporting Problems.</li>
+	</ol>
+   <h4>Promote IDTE</h4>
+   <p>You can help to promote IDTE by: </p>
+	<ol>
+   <li>Talking about IDTE to your friends and family.</li>
+   <li>Donating money.</li>
+	</ol>   
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+<div id="Woocommerce" class="rohitink-tabs-pane">
+
+<h2>For Further Help</h2>
+<hr>
+<h4>Main Website</h4>
+<p><a href="http://sourceforge.net/projects/idteid3tagedito/"><b>http://sourceforge.net/projects/idteid3tagedito/</b></a></br>
+</p>
+<h4>Forums</h4>
+<p>
+<a href="http://sourceforge.net/p/idteid3tagedito/discussion/general/"><b>http://sourceforge.net/p/idteid3tagedito/discussion/general/</b></a></br>
+</p>
+<h4>Request Features</h4>
+<p>Open a new ticket in the <b>Request feature</b> section.</p>
+<p>There is no guarantee it will be added however; what is a great feature for one person might be a big nuisance for another, or it simply is too difficult or time consuming to add it in. They are hints as to what are the most wished-for additions or modifications to the software, and they will be considered on the basis of urgency, popularity, available developer time and technical feasibility</p>
+
+<h4>Report Bugs</h4>
+<p>Open a new ticket in the <b>Bug report</b> section.</p>
+<p>If you find that IDTE isn't working correctly or plain crashing, you probably encountered a bug. First check if you have the latest version, each release IDTE gets improved and bugs get fixed (unfortunately, sometimes added as well so always tread careful when updating).Check the forums: maybe other users noticed it as well and found a fix or are in discussion.</p>
+<p>Search for it and if it's not there, you can add it and help the developers find and fix it.</p>
+
+</div><!-- Close Tabs Pane -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="TipsAndTricks" class="rohitink-tabs-pane">
+<h2>Credits</h2>
+</hr>
+<h6>Designed By Rohitink.com</h6>
+<p>A biggest thanks goes to Mr. <b>Rohit Tripathi</b> for carrying out this help manual in the best possible way. This help file is designed and improvised by the <a href="http://rohitink.com/">RohitInk.com</a> exclusively for IDTE.</p>
+
+<h6>IDTE Credits</h6>
+
+<li><b>Rajat</b> (GUI Creater For SciTE4 AutoHotKey)</li>
+
+<li>Those who've included some awesome code snippets on AutoHotKey forums as well as in AHK examples.</li>
+
+<li><b>Source Forge</b> developers (for providing an area to explore projects)</li>
+
+<li><b>Ian Luck</b> For BASS Library And Bass Plugins Developers Copyright (c) 1999-2013 Un4seen Developments Ltd. All rights reserved <a href="http://www.un4seen.com/">http://www.un4seen.com/</a></li>
+
+<li><b>WPClipart.com</b> - CD Jewel Case <a href= "http://www.wpclipart.com/computer/disks/CD_2/CD-RW_in_jewel_case.png.html">http://www.wpclipart.com/computer/disks/CD_2/CD-RW_in_jewel_case.png.html</a></li>
+
+<li><b>Stefan Tongi and  Ulrich Decker</b> - AudioGenie tag reading library <a href = "http://sourceforge.net/projects/audiogenie">http://sourceforge.net/projects/audiogenie</a></li>
+
+<li><b>Oxygen Team</b> - All the icons (Oxygen icons) used in IDTE are developed by the Oxygen Team</li>
+
+<li><b>Infogulch</b> - Toaster Popups <a href = "http://www.autohotkey.com/board/topic/21510-toaster-popups/">http://www.autohotkey.com/board/topic/21510-toaster-popups/</a></li>
+
+<li><b>Corrupt</b> - Graphic Button <a href = "http://www.autohotkey.com/q=Graphic_button">http://www.autohotkey.com/q=Graphic_button</a></li>
+
+<li><b>AutoIt Developer</b> For ID3 UDF<a href = "http://www.autoitscript.com/forum/index.php?showtopic=43950&st=0">http://www.autoitscript.com/forum/index.php?showtopic=43950&st=0</a></li>
+
+<li><b>SKAN</b> For Unicode To Ansi And Ansi To Unicode Conversion</li>
+
+ 
+</div><!-- Close Tabs Pane -->
+
+
+<!--
+<div id="Migration" class="rohitink-tabs-pane">
+<h2>Migration to Jupiter v2.0</h2>
+
+
+<p>In V2.0 we have done huge changes to both backend and fronted. these changes were performance improvements, new features, bug fixes, new design in Masterkey Framework and a new page composer with huge functionality.</p>
+
+<p>I would like to take the time to appreciate for all your patience until I deliver this version. I have some notes and steps for your on how to migrate to V2.0</p>
+
+<p>Please note that depending to number of your pages this migration may take from 10 min to 2 hours. so I suggest you to enable maintenance mode to avoid visitors see the site while you are fixing some issues.</p>
+
+<p>We have changed the whole page composer with the newest version of Visual composer, it took a lot of effort to migrate our old page composer to new one as we had to do this process smoothly and carefully to avoid any issues that might happen to current customers. Good news is that we have migrated successfully without compromising anything and now its ready to use. </p>
+
+<h5>Why we have moved to new version : </h5>
+
+<ol>
+<li>Its coded with Backbone.js a library which adds speed to your process. </li>
+<li>more easier to control, its drag and drop feature improved.</li>
+<li>Rows have been introduced so you can have nested columns, columns into page section, tabs and accordions into columns and many more stuff that if you worked for a long with old one you will see the big change and possibility that you can achieve now.</li>
+<li>Many small features such as new media uploader for gallery shortcode that I don't want to point out all of them here.</li>
+</ol>
+
+<h5>What will happen to our contents that we built them with old page composer?</h5>
+
+<p>Since in new page composer shortcodes can not be placed in visual canvas, they all must be placed inside a row or page section shortcode.
+In new page composer none of the elements are built-in columns. but This process has been automated. if you visit a page that built with old page composer you will face with a button that ask you to convert the page elements to new one. now here we have 2 steps :</p>
+
+<ul>
+<li> If you did not use page section shortcode in this page, here we go click on convert and thats it. check everything and delete empty text blocks that you may find between short codes (this is normal to see empty text blocks). Preview page and fix any column issue that you find is not converted correctly.</li>
+<li>If you have used page section you should follow below steps :</li>
+<ul>
+
+<ol>
+<li>Once you arrive to the page click classic mode to switch to classic editor.</li>
+<li>search for page section shortcode and insert vc_column shortcode right inside of it as below :</li>
+
+[rohitink_page_section][vc_column width="1/" el_position="first"]     your short codes inside this page section stays here     [/rohitink_page_section][/vc_column]
+
+<li>Once you have done with this process click on Page Composer mode and hit the button that asks you to convert the content.</li>
+<li>As the content is converted visit back the classic editor and find the page sections once again and remove [vc_row][vc_column width="1/2" el_position="first"] from where [rohitink_page_section] shortcode starts.</li>
+<li>Also remove the closing shortcode tags of [/vc_column][/vc_row] wherever you find [/rohitink_page_section]</li>
+<li>you will need to set the columns inside page section manually(in other places this will be converted automatically).</li>
+
+</ol>
+
+<h5>Tabs & Accordions</h5>
+
+<p>Since Tabs and accordions coding in page composer and front-end has been changed in v2+, you will need to clone tabs or accordions using clone icon (in page composer visual mode) and delete the old one. This action will trigger the nesessary codes and build up the shortcode and other front-end needed unique IDs.</p>
+<br><br>
+<p>Thats all about it. if you need our assistance or feel you can not convert a page yourself please open a thread and leave your WP access. Our staff will work more hours this week to cover support issues more faster to make this migration smoother for everyone.</p>
+
+
+<p>For anyone who have purchased the v2+ will no longer need to follow above steps and you can enjoy our new dummy data(that converted). We have updated documentation => Page Composer section to explain the new added sections in detail. We have updated Page Template section in documentation as well so you can use them with new page composer.</p>
+
+<p>For any quick question I will try my best to back to you in comments section throughout the day.</p>
+
+
+
+</div>Close Tabs Pane -->
+
+
+
+
+
+
+
+</div><!-- Close all Panes -->
+</div>
+
+</div><!-- Close rohitink-grid -->
+
+<div class="footer">
+
+  <div class="rohitink-grid">
+    <div class="rohitink-message-box rohitink-simple-message-box">
+        <span>
+            <p>Thank you for considering IDTE. If you have any questions that are beyond the scope of this help file, please feel free to start a new topic in discussion. we also do have an FAQ section , so have a look on them too.</p>
+            <div class="rohitink-button-align center">
+               <a class="rohitink-button medium" href="http://sourceforge.net/p/idteid3tagedito/discussion/general/">Discussion</a>
+               <a class="rohitink-button medium" href="FAQs.txt">FAQ</a>
+
+            </div>
+        </span>
+    </div>
+      <ul class="footer-nav">
+        <li><a href="http://rohitink.com/">Built by RohitInk.com for Rajat Kosh.</a></li>
+      </ul>
+  </div>
+
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.tabs.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+</html>

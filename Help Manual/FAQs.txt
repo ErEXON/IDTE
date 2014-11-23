@@ -1,0 +1,47 @@
+Q::What is ID Tag?
+A::ID3 is a metadata container most often used in conjunction with the MP3 audio file format. It allows information such as the title, artist, album, track number, and other information about the file to be stored in the file itself.
+There are two unrelated versions of ID3: ID3v1 and ID3v2.
+
+Q::What is Quick Tag Editing Mode ?
+A:: This Mode is Specifically designed for those users, who want edit Tags without Navigating Here and There i.e. who Only Wants to Tag Files Using TAB and ENTER
+Hotkeys.
+
+Q::What is XSPF  ?
+A::XML Shareable Playlist Format (XSPF), pronounced spiff, is an XML-based playlist format for digital media, sponsored by the Xiph.Org Foundation.
+
+Q::IDTE is not automatically checking for Updates , WHY?
+A::By Default, automatic Updates in IDTE is Turned off . However, you can turn it on 
+1. Open IDTE, goto Tools --> Configure IDTE
+2. Now Check the Option "Automatically Check For Updates on Startup"
+3. Click OK , There You Go!
+Now, IDTE will Automatically Check For Updates (If any Available)
+
+Q::What is IDTE?
+A::IDTE is a windows Platform ,Open Source Application For Playing,Tagging,Searching,Exporting or Writing... ID3v1,ID3V2.x,Flac,WMA,WAV,MP4 etc. Tags Into Music Files .  
+ 
+Q::How To Change IDTE theme?
+A::You Can Do This Simply :-
+1.Open Configure IDTE
+2.goto Tools-->configure
+3.click on Themes Tab
+4.Select Any One Theme
+5.Click OK
+6.Restart IDTE 
+
+Q::How Do I Participate In This Project ?
+A::There is no need to be a Programmer or a C/C++ GURU, but if You Want to contribute to this Project then You Can Contribute it through ------> *Reporting Bugs,*Providing Suggestions,*Providing Scripts,*Writing Help Manuals.
+
+Q::What is AutoHotKey?
+A::Check Out This --> www.autohotkey.com
+
+Q:: What is AUTOIT?
+A::Check Out This --> www.autoitscript.com/site/autoit/
+
+Q::Can I Use This Software In Linux?
+A::Why Not. But ,Make Sure You Have A Software For Running Windows Application in LINUX such as Wine etc.
+
+Q::What is  Releasing Criterea of IDTE?
+A::The Releasing criteria of IDTE is  2/3/4 or Less Months or even 6-7 days , which includes newer version with bug fixes And Much more New Features.
+
+
+
