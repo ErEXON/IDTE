@@ -13,6 +13,7 @@
 ;______________________________________________________________________________OPEN FILE_________________________________________________________________________________________;
 ContextFile:
 openfile:
+    Critical , on
     XT=0    ;Cut Flag
     CT=0   ;Copy Flag
     PT=0  ; Paste Flag
@@ -36,7 +37,8 @@ Opus Audio Codec (*.opus;)
 */
     if Choosefile=  ; IF no file is selected
         {
-            ChooseFile = %ChooseFilePrev%   
+            ChooseFile = %ChooseFilePrev% 
+                    Critical , off
             return
         }
 
@@ -101,6 +103,7 @@ SetTimer , Check_Progress   ;Turn the Checker Back ON
         SetTimer , GETLEVEL , 50
     else 
         SetTimer , GETLEVEL , off
+    Critical , off
 return
 ;____________________________________________________________________________________FILE OPENING ENDS HERE________________________________________________________________________;
 
@@ -380,10 +383,10 @@ return
 
 ;_______________________________________________________________________________________OPEN FOLDER TO TAG ________________________________________________________________________;
 openfolderRec: ;Recursively open Folder
+    Critical , on
     rec=1 ;Flag For Recursive Call
 ContextFold: ;Label For Context Menu
 openfolder: ;Label For Non Recursive Call
-    Critical , on
     Gui +OwnDialogs  ; Forces user to dismiss the following dialog before using main window.
     FileSelectFolder , Folder,*%Defalt_Dir%, 2, Select Your Music folder to Tag
         if not Folder  ; The user canceled the dialog.
@@ -414,7 +417,7 @@ GETIT:
     DllCall( "LoadLibrary", Str,A_ScriptDir "\Plugins\AudioGenie3.dll" )
     DllCall( "AudioGenie3\AUDIOAnalyzeFile", Str,Dummy ) ; Dummy Call for SplashText
     GuiControl , , milli, Processing Files Please Wait... 
-    Progress, M %Val%, ,Scanning Files.., Keep Calm..
+    Progress , M  Fm10 Fs10 WM400 H70 ZH11, Scanning.. , Please Wait.. ,Scanning Supported Files.. , Arial
     T1 := A_TickCount 
     Loop, %Folder%\*.*,0,%rec%
         {
@@ -508,6 +511,21 @@ ButtonSave:
     ControlGet, List, List, Selected, SysListView321, A
     ValueRow:= LV_GetCount("S")
     SingleTag=%ValueRow%
+    if(ValueRow = 0)
+    {
+        MsgBox , 16, Error, No file selected for tag editing.
+        GuiControl , , GUI_Text, Ready
+        GuiControl, Focus , MyListView
+        SetTimer , Check_Progress 
+            if min=
+                SetTimer , GETLEVEL , 50
+            else 
+                SetTimer , GETLEVEL , off
+       
+        GuiControl,Enable, Mylistview 
+        Critical , off
+    return
+    }
     Progress , M  Fm10 Fs10 WM400 H70 ZH11, Please wait.. , Working Please Wait.. ,Working.. , Arial
     Loop, Parse, List, `n  ; Rows are delimited by linefeeds (`n).
         {

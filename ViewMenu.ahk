@@ -17,7 +17,7 @@ REF:
 RefreshList:
     SetTimer , Check_Progress , off
     SetTimer , GETLEVEL , off
-Progress , M  Fm10 Fs10 WM400 H70 ZH11, Getting Tags.. , Please Wait.. ,Refreshing Fields.. , Arial
+Progress , M  Fm10 Fs10 WM400 H70 ZH11, Don't Panic`, List will be available soon , Please Wait.. ,Refreshing Fields.. , Arial
     Gui +LastFound
     if ByType=
         ControlGet , List, List, ,SysListView321, A

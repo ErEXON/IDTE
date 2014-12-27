@@ -4,7 +4,7 @@ Gui,About:Add,Picture, x10 y0 w50 h50, IDTE.ico
 Gui,About:Add,picture, x450 y5 ,   %A_WorkingDir%\GUI\icons\oxygen.png
 Gui,About:Add,text, x70 y2 , IDTE - ID3 Tag Editor
 Gui, About:Font, S8 CDefault bold, Tahoma
-Gui,About:Add,text, x70 y22, Version 2.6 (Escalation) `nAuthor - Rajat kosh
+Gui,About:Add,text, x70 y22, Version 2.8 `nAuthor - Rajat kosh
 Gui,About: Add, link,x0 y0 w0 h0  vlink,<a href="Deselect Mail">www.google.com</a> 
 Gui, About:Add, link,x190 y35 gEmaillink vEmaillink,<a href="rajatkosh2153@gmail.com">rajatkosh2153@gmail.com</a> 
 

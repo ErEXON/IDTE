@@ -19,7 +19,7 @@ Gui, Add, pic, x22 y295 w90 h90 vAlb_art,
 Gui, Add, GroupBox, x12 y279 w110 h110 , Album Art
 Gui, Add, Button, x132 y289 w110 h20 , Change Album Art
 Gui, Add, Button, x132 y319 w110 h20 , Remove Album Art
-Gui, Show, w364 h441, Tag (A Minimalistic Ver. of IDTE )
+Gui, Show, w364 h441, Minimal IDTE
 
 	library := DllCall( "LoadLibrary", Str,"AudioGenie3.dll" )
 	DllCall( "AudioGenie3\AUDIOAnalyzeFileW", Str,Dummy ) ; Dummy Call

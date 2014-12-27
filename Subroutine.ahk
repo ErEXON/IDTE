@@ -42,8 +42,10 @@ if A_GUIEvent = DoubleClick
 if A_GUIEvent = I
 {
    ValueRow:= LV_GetCount("S") ; Get Currently selected file Rownumber 
-   if(ValueRow > 2)
+   if(ValueRow>2 and Multi_Sel=1)
+   {
       return
+   }
    GuiControl , focus , Mylistview
    goto , contextHighlight
 }
@@ -538,8 +540,23 @@ ADG_getcoverinfo(byref covertypeinfo, byref coversize, byref PicNum)
       {
          Covertypeinfo:=DllCall(A_ScriptDir "\Plugins\AudioGenie3\FLACGetPictureTypeTextW",uint ,01,wstr)
          coverSize:=  DllCall(A_ScriptDir "\Plugins\AudioGenie3\FLACGetPictureSizeW", uint, 1) 
-         Picnum := DllCall(A_ScriptDir "\Plugins\AudioGenie3\FLACGetPictureCountW", uint, 1, uint)
-         Picnum := Picnum - 9568256
+         Picnum := DllCall(A_ScriptDir "\Plugins\AudioGenie3\FLACGetPictureCountW", uint, 1, int)
+           ;Hell := DllCall(A_ScriptDir "\Plugins\AudioGenie3\FLACGetPictureTypeTextW",uint ,03,wstr)
+         if (Picnum > 1)
+            {
+               loop 
+               {
+                  Temp := DllCall(A_ScriptDir "\Plugins\AudioGenie3\FLACGetPictureTypeTextW",uint , A_index , wstr)
+                   ;MsgBox , %Temp%
+                  IfInString, Temp, \
+                  {
+                   Picnum := A_index - 1
+                     break
+                  }
+                   
+               }
+               
+            }
             if covertypeinfo=
                {
                      Covertypeinfo= No Description

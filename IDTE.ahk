@@ -43,6 +43,13 @@ FileDelete, %A_MyDocuments%\IDTE_Data\IDTE_Logs.log ; Delete Previous Logs Gener
 FileAppend , IDTE Log, %A_MyDocuments%\IDTE_Data\IDTE_Logs.log  ; Create Space for New Logs (that is to be generated)
 
 
+;___________________________________________________________Folder Existence and Volume Session Management _________________________________________________________________________;
+
+;NOTE - Note - All the configuration settings are saved in a file named IDTE_Configuration.ini in my documents / documents folder in your Computer. If you want the IDTE to revert to its default settings then, delete this file in my document / documents folder, IDTE will automatically recover this file with its default settings.
+
+IfNotExist , %A_MyDocuments%\IDTE_Data  ;Check for Folder in order to save Configuration and Last Database
+    FileCreateDir , %A_MyDocuments%\IDTE_Data ; if there is no such existence of folder IDTE_Data in My Documents then, create one 
+
 IfNotExist , %A_MyDocuments%\IDTE_Data\IDTE_Configuration.ini  ;If  IDTE Configuration (IDTE_Configuration.ini) doesn't exist on a machine then Follow following Procedure
 {
     FileCopy , %A_WorkingDir%\Bin\IDTE_Configuration.ini, %A_MyDocuments%\IDTE_Data\IDTE_Configuration.ini, UseErrorLevel ; Copy the Default ini file from the Bin Folder.
@@ -66,15 +73,6 @@ IfNotExist , %A_MyDocuments%\IDTE_Data\IDTE_Configuration.ini  ;If  IDTE Configu
             }
 }
 
-;___________________________________________________________Folder Existence and Volume Session Management _________________________________________________________________________;
-
-;NOTE - Note - All the configuration settings are saved in a file named IDTE_Configuration.ini in my documents / documents folder in your Computer. If you want the IDTE to revert to its default settings then, delete this file in my document / documents folder, IDTE will automatically recover this file with its default settings.
-
-IfNotExist , %A_MyDocuments%\IDTE_Data  ;Check for Folder in order to save Configuration and Last Database
-    FileCreateDir , %A_MyDocuments%\IDTE_Data ; if there is no such existence of folder IDTE_Data in My Documents then, create one 
-
-ifNotExist , %A_MyDocuments%\IDTE_Data\Vol.vol  ; Create a file for Keeping track of Volume Levels and Other Info.
-    FileCopy , %A_WorkingDir%\GUI\BG.cfg, %A_MyDocuments%\IDTE_Data\BG.cfg, UseErrorLevel
 
 ifNotExist , %A_MyDocuments%\IDTE_Data\Vol.vol
     FileCopy , %A_WorkingDir%\Bin\Vol.txt, %A_MyDocuments%\IDTE_Data\Vol.vol, UseErrorLevel
@@ -183,7 +181,7 @@ if(Checker7=1)
 #Include Gui3.ahk ;Include GUI 3 (or Theme3)
 #Include MenuItems.ahk ; Include Context,Menubar etc menus
 #include InitializeBassModules.ahk ; Make All Basic Calls To Bass Library for Initialization
-
+GuiControl,-Redraw, Mylistview
 ;_________________________Miscellaneous Settings___________________________________________________________________________
 
 SetWinDelay,1
@@ -220,7 +218,6 @@ else if (FlagPlay=4)
     Menu ,PlayM, Check, &Play Random   
 
 ;______________________________________________________________________________RESTORE LAST DATABASE _________________________________________________________________________;
-
 IfExist , %A_MyDocuments%\IDTE_Data\LastDB ;LastDB - It Restores The Previous Session Files Into The List View
 {
     T1 := A_TickCount
@@ -299,7 +296,7 @@ ifNotExist ,  %A_MyDocuments%\IDTE_Data\LastDB
                 LV_ModifyCol(A_Index,70)
         }
 }
-
+GuiControl,+Redraw, Mylistview
     Timer_Time := 2000  ;Lyrics  Autoscrolling Rate 
 GuiControl , , Scroll_Rate,Current Scroll Rate : %Timer_Time% Milliseconds
 IniRead , checker2 , %A_MyDocuments%\IDTE_Data\IDTE_Configuration.ini, Album_Art, Player_Art
@@ -514,7 +511,6 @@ SingleTag=%ValueRow% ; Singletag Variable for Single/Multiple File Selection
 
 if(ValueRow > 1) ; if multiple files are selected then skip to last
     goto , jump 
-
 ;Default Values
 {
    Trackinfo = 
@@ -542,7 +538,6 @@ Loop
       LV_GetText(Folder, RowNumber, 9)
    LV_GetText(text, RowNumber, 8)
 }
-
     mp3FileA := Folder "\" text ; Set File Completely
 IfNotExist , %Folder%\%text%
     {
@@ -552,11 +547,15 @@ IfNotExist , %Folder%\%text%
     return
     }
 
-
-ADG_getinfo(mp3fileA, Trackinfo, Titleinfo, Artistinfo, Albuminfo, Genreinfo, Yearinfo, Bandinfo,Publisherinfo,Composerinfo,Commentinfo,Channelinfo,Lyrics)
-ADG_getcover()
-ADG_getcoverinfo(covertypeinfo, coversize, PicNum)
-
+if(ValueRow = 0)
+    Text = No File Selected
+else
+{
+    ADG_getinfo(mp3fileA, Trackinfo, Titleinfo, Artistinfo, Albuminfo, Genreinfo, Yearinfo, Bandinfo,Publisherinfo,Composerinfo,Commentinfo,Channelinfo,Lyrics)
+    ADG_getcover()
+    ADG_getcoverinfo(covertypeinfo, coversize, PicNum)
+    Multi_Sel=0
+}
 ; No of Pictures in a File 
 Updown := 1 ; By default 1
 
@@ -577,6 +576,12 @@ if (Picnum <= 1) ; if no. of pictures <=1
 if Lyrics=
     Lyrics = No Lyrics Found
 
+    Menu , CoverArtMenu , Enable , Show Album Art,
+    Menu , MyContextMenu , Enable , Preview Album Art,
+    Menu , MyContextMenu , Enable , Play,
+    Menu, MyContextMenu, Enable,Properties,
+    Menu, MyContextMenu, Enable,Open File Location
+
 ; Set Retrieved information (Contained in respective Variables) into the GUI
 
 GuiControl,, Title, %Titleinfo%
@@ -592,6 +597,8 @@ GuiControl,, Publisher, %Publisherinfo%
 GuiControl, , covertype, %UpDown%/%Picnum% %Covertypeinfo% - %coverSize% Bytes
 GuiControl, , LRC, %Lyrics%
 
+if(ValueRow = 0)
+GuiControl, , covertype, No Image for Preview
 ;Get Audio Info
 CH = ; Channel Mode
 HZ = ; Bitrate (I Know Var is kind'a Lame)
@@ -653,7 +660,7 @@ GuiControl , ,GUI_Text , %MySub%
 jump:
 if(SingleTag > 1)
     { ; if more than one file is selected
-    
+        Multi_Sel=1
         ; Set all Fields as Keep
         GuiControl,, Title, <keep> 
         GuiControl,, Artist ,<keep>
@@ -669,7 +676,6 @@ if(SingleTag > 1)
         ; Change Some other Gui Controls
         GuiControl, , covertype,
         ; Disable some menu items which are not applicable
-        Menu , CoverArtMenu , Disable ,  Remove Album Art,
         Menu , CoverArtMenu , Disable , Show Album Art,
         Menu , MyContextMenu , Disable , Preview Album Art,
         Menu , MyContextMenu , Disable , Play,
@@ -1098,6 +1104,7 @@ return
 ;_______________________________________________________________________________________EXIT_______________________________________________________________________________________;
 Exitnow:
 GuiClose:  ; Indicate that the script should exit automatically when the window is closed.
+Critical , on
 SetTimer , Check_Progress , off 
 SetTimer , GETLEVEL , off
     FileDelete , %A_Temp%\AlbumArt.png
@@ -1115,6 +1122,7 @@ IniRead , checker64,%A_MyDocuments%\IDTE_Data\IDTE_Configuration.ini ,Start,Prom
                 }
             else
                 {
+                    critical , off
                     SetTimer , Check_Progress 
                         if min=
                             SetTimer , GETLEVEL , 50
@@ -1125,7 +1133,7 @@ IniRead , checker64,%A_MyDocuments%\IDTE_Data\IDTE_Configuration.ini ,Start,Prom
         }
         
 EXITROUTINE:
-
+Critical , on
 IniRead , checker76 , %A_MyDocuments%\IDTE_Data\IDTE_Configuration.ini, List, Clear_List_Start
 if (Checker76=1)
     {
@@ -1928,6 +1936,8 @@ GuiControl, Focus , MyListView ;Focus The List View
 return
 
 Scroll:
+if min<>
+    SetTimer , Scroll ,off
 ControlGetFocus, Edit15, A
 SendMessage, 0x115, 1, 0, Edit15, A
 return
@@ -2017,18 +2027,25 @@ GuiControl ,Disable, Mylistview
 
                 if A_Index=8
                     Text=%A_LoopField%
-                if A_Index=9
+                else if A_Index=9
                     Folder=%A_LoopField%
 
-                if A_Index=10
+                else if A_Index=10
                 {
                     loop , %Folder%\%Text%
                         filename := A_LoopFileFullPath
 
+                    FileDelete , %A_Temp%\AlbumArt.png
+                        FileDelete , %A_Temp%\AlbumArt.jpg
                     ADG_getcover()
+                    
                     IfNotExist , %A_Temp%\AlbumArt.png
-                            continue
-                    FileMove , %A_Temp%\AlbumArt.png, %Coutput%\CoverArt%SingleTag%.png , 1
+                        IfNotExist , %A_Temp%\AlbumArt.jpg
+                            continue                                   
+                    IfNotExist , %A_Temp%\AlbumArt.png
+                        FileMove , %A_Temp%\AlbumArt.jpg, %Coutput%\CoverArt%SingleTag%.jpg , 1
+                    else
+                        FileMove , %A_Temp%\AlbumArt.png, %Coutput%\CoverArt%SingleTag%.png , 1
                 }
             }
         SingleTag=%A_Index%
@@ -2054,7 +2071,11 @@ Loop, Parse, List, `n  ; Rows are delimited by linefeeds (`n).
                     SplitPath , filename , , , FileExtn
                     Coverpic = %A_Temp%\Covers\CoverArt%SingleTag%.png
                     IfNotExist , %A_Temp%\Covers\CoverArt%SingleTag%.png
+                        IfExist , %A_Temp%\Covers\CoverArt%SingleTag%.jpg
+                                Coverpic = %A_Temp%\Covers\CoverArt%SingleTag%.jpg
+                        else
                             goto , outloop
+                    
                     if FileExtn in MP3,AAC,MPP,TTA
                         {
                             CoverDes = Added Using IDTE - Id3 Tag Editor [Unique ID = %uniq%]  
@@ -2215,10 +2236,12 @@ return
 GuiSize:
 if(A_Eventinfo = 1)
 {
+    Critical , on
+    WinMinimize , IDTE-ID3 Tag Editor
     min = 1
-    critical , on
     SetTimer , Scroll , Off 
     SetTimer , GETLEVEL , off
+    critical , off
 return
 }
 else if(A_Eventinfo = 2)

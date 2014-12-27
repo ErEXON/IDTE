@@ -201,8 +201,8 @@ if (GUISELECT=2)
 	Gui, Add, Text, x%XEDIT% y30 w130 h15 , Artist
 	Gui, Add, Text, x%XEDIT% y75 w130 h15 , Album
 	Gui, Add, Text, x%XEDIT% y120 w130 h15 , Title
-	Gui, Add, Text, x%XEDIT% y165 w80 h15 , Year
-	Gui, Add, Text, x%XYER% y165 w80 h15 , Track
+	Gui, Add, Text, x%XEDIT% y165 w80 h15 , Track
+	Gui, Add, Text, x%XYER% y165 w80 h15 , Year
 	Gui, Add, Text, x%XGEN% y165 w80 h15 , Genre
 	Gui, Add, Text, x%XEDIT% y210 w130 h15 , Composer
 	Gui, Add, Text, x%XEDIT% y255 w80 h15 , Comments
@@ -257,7 +257,7 @@ if (GUISELECT=2)
 	Gui,Add,Button, x%XFST% y320  vfst_but ,Fast
 	Gui,Add,Button, x%XCST% y320  vcus_but,Custom
 	XVIS := XMAX-50
-	Gui,Add,Pic,	x%XVIS% y320 w24 h24 gVisual_Toggle , %A_WorkingDir%\GUI\icons\visual.bmp
+	Gui,Add,Pic,	x%XVIS% y320 w24 h24 vvis_tgl gVisual_Toggle , %A_WorkingDir%\GUI\icons\visual.bmp
 	GuiControl , hide , Pict
 	Gui, Add, Text, x%XGBX% y365 w300 vScroll_Rate
 

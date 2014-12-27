@@ -33,11 +33,11 @@ Exitapp
 }
 FileReadLine , version , %A_Temp%\version.txt , 1
 
-if  version=2.6
+if  version=2.8
 {
 SplashTextOff
 if CMD_Recieved !=
-MsgBox , 64, Updates , No Updates Available `, Your Application is Updated to its Latest Version i.e. v2.6
+MsgBox , 64, Updates , No Updates Available `, Your Application is Updated to its Latest Version i.e. v2.8
 ExitApp
 }
 
