@@ -5,8 +5,8 @@ IDTE is a full featured tag editor which supports tagging of FLAC, APE, ID3V1.x/
 This Repository contains the Source Code For IDTE (Autohotkey).
 
 To Contribute :-
-> Fork this Project.
-> Clone your forked repo into local folder.
-> Create a Branch (if you would like to add some features).
-> Commit your Code Changes.
-> Create a Pull Request.(i will get to u ASAP).
+> 1. Fork this Project.
+> 2. Clone your forked repo into local folder.
+> 3. Create a Branch (if you would like to add some features).
+> 4. Commit your Code Changes.
+> 5. Create a Pull Request.(i will get to u ASAP).
